@@ -1,7 +1,7 @@
 {
   "name": "markdown-previewer",
   "version": "0.1.0",
-  "homepage": "http://danielleleb.github.io/markdown-previewer",
+  "homepage": "https://danielleleb.github.io/markdown-previewer",
   "private": true,
   "dependencies": {
     "marked": "^0.5.1",
