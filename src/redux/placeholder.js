@@ -1,4 +1,4 @@
-const Placeholder = `
+const placeholder =   `
 # Welcome to my React Markdown Previewer!
 
 ## This is a sub-heading...
@@ -45,4 +45,4 @@ And here. | Okay. | I think we get it.
 
 ![React Logo w/ Text](https://goo.gl/Umyytc) `
 
-export default Placeholder;
+export default placeholder;

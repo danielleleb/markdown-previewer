@@ -1,42 +1,34 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-import {updateText} from '../actions/index';
-import Placeholder from './placeholder';
-
+import {updateText} from '../redux/actions/index';
 
 class TextEditor extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            text: Placeholder
-        }
+
+    handleChange = (event) => {
+        const text = event.target.value;
+        this.props.updateText(text);
     }
 
     render() {
+        const { text } = this.props;
+
         return (
             <div>
                 <textarea
-                    onChange={(event) => this.handleChange(event.target.value)}
-                    value={this.state.text}
+                    onChange={this.handleChange}
+                    value={text}
                     type="text"
                     className="input"
                     id='editor'/>
             </div>
         )
     }
-
-    handleChange(text) {
-        this.setState({
-            text
-        });
-        this.props.updateText(text);
-    }
 }
 
-function mapPropsToState({text}) {
+function mapPropsToState({ text }) {
     return {
-        text
+        text: text[0]
     }
 }
 

@@ -1,4 +1,4 @@
-import Placeholder from '../components/placeholder'
+import Placeholder from '../placeholder'
 const initialState = Placeholder;
 
 export default function (state = [initialState], action) {
